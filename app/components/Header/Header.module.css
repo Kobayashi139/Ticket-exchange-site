@@ -85,7 +85,10 @@
 }
 
 .draweMenu a {
+  color: var(--font-white);
   display: block;
   padding: 20px 0;
   font-size: 2rem;
+  /* 下のラインを消す */
+  text-decoration: none;
 }
