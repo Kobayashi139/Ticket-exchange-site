@@ -1,0 +1,91 @@
+/* 全体のヘッダースタイル */
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0 40px;
+  z-index: 50;
+  position: fixed;
+}
+
+/* ハンバーガーメニューアイコン */
+.menu-icon {
+  z-index: 20;
+  background-color: transparent;
+  border: none;
+  /* cursor:　カーソルをポインター（指）にする */
+  cursor: pointer;
+  /* 固定する */
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  /* 押しやすいように範囲を広げる */
+  padding: 20px 10px;
+}
+
+.menu-icon span {
+  background-color: var(--font-white);
+  width: 35px;
+  height: 2px;
+  display: block;
+  margin-bottom: 8px;
+  transition: all 0.5s;
+}
+
+.menu-icon p {
+  color: var(--font-white);
+}
+
+/* アイコンのアニメーション */
+.menu-icon.open span:nth-child(1) {
+  transform: translateY(10px) rotate(130deg);
+}
+
+.menu-icon.open span:nth-child(2) {
+  transform: scale(0);
+}
+
+.menu-icon.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-130deg);
+}
+
+.draweMenu {
+  z-index: 15;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  display: block;
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.draweMenu.open {
+  /* 左からメニューが出てくる */
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.draweMenu ul {
+  padding: 0;
+  display: flex;
+  /* 要素を縦並びにする */
+  flex-direction: column;
+  /* 上下センター */
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.draweMenu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.draweMenu a {
+  display: block;
+  padding: 20px 0;
+  font-size: 2rem;
+}

@@ -1,27 +1,33 @@
 :root {
   --back-blue: #0086ad;
-  --ight-green: #addc74;
+  --light-green: #addc74;
 
   --font-black: #3f4551;
   --font-white: #fbfbfb;
   --light-blue: #006ade;
   --grean-blue: #0086ad;
 
-  --back-circle: rgba(var(--ight-green), 0.44);
+  --back-circle: rgba(var(--light-green), 0.44);
 }
 
 html,
 body {
   max-width: 100vw;
+  height: 1000vw;
   overflow-x: hidden;
 }
 
 body {
   color: var(--font-white);
-  background: var(--back-blue);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--back-blue);
+  background-image: url('/images/seigaha.svg');
+  background-size: 300px 300px;
+  background-repeat: repeat;
+  position: relative;
 }
 
 * {
@@ -33,4 +39,68 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* 画面両端に波のSVGを配置 */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px; /* 波のSVGの幅に応じて調整 */
+  background-image: url('/images/wave-left.svg');
+  background-repeat: repeat-y;
+  background-size: contain;
+  left: 0; /* 左側に配置 */
+  z-index: 10;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px; /* 波のSVGの幅に応じて調整 */
+  background-image: url('/images/wave-right.svg');
+  background-repeat: repeat-y;
+  background-size: contain;
+  right: 0; /* 右側に配置 */
+  z-index: 10;
+}
+
+/* 背景の模様…… */
+.c-double-circle {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  position: relative;
+  border: solid var(--light-green) 8px;
+  box-sizing: border-box;
+  margin: 8px auto 0;
+}
+
+.c-double-circle::before {
+  content: '';
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light-green);
+  box-sizing: border-box;
+}
+
+.c-double-circle::after {
+  content: '';
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid var(--light-green) 2.5px;
+  box-sizing: border-box;
 }
