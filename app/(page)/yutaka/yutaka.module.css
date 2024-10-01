@@ -1,0 +1,53 @@
+/* スマホサイト用 */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 40px;
+  font-family: var(--font-geist-sans);
+  font-weight: normal;
+  justify-content: space-between;
+}
+
+.card {
+  width: 100%;
+  height: auto;
+  margin: 0.5rem 0rem;
+  padding: 1rem 0.8rem;
+  border-radius: 10px;
+  background-color: var(--font-white);
+  color: var(--font-black);
+  align-items: center;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cardImg {
+  padding-top: calc(3 / 6 * 100%);
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.cardImg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardText {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+  margin-bottom: 0.3rem;
+}
+.address::before {
+  content: '所在地: ';
+}
