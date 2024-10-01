@@ -3,20 +3,110 @@
   --変数名:値; でカスタムプロパティの定義ができる 
   実際に使いたい箇所で var(--変数名) と記述すると、定義した値を当てはめられる
   */
-  justify-items: center;
+
   min-height: 100svh;
-  padding: 100px 55px;
+  padding: 100px 40px;
   font-family: var(--font-geist-sans);
+  font-weight: bold;
+  position: relative;
+  flex-direction: column;
 }
 
 .page h1 {
+  font-weight: 600;
+  align-items: center;
   font-size: 1.5em;
+  line-height: 1.3rem;
+  /* コンテナ内は横並び可能にする */
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
+.page h1::before,
+.page h1::after {
+  content: '';
+  height: 2px;
+  flex-grow: 1;
+  background-color: var(--font-white);
+}
+.page h1::before {
+  margin-right: 1rem;
+}
+.page h1::after {
+  margin-left: 1rem;
+}
+
+.page h3 {
+  font-weight: normal;
+}
+
+.page p {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+
+.centerMsg {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.subtitle {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
 .whiteBox {
   background-color: var(--font-white);
   margin-bottom: 1rem;
   color: var(--font-black);
-  padding: 1rem;
+  padding: 1rem 0.8rem;
   align-items: center;
   border-radius: 10px;
+  text-align: center;
+}
+
+.whiteBox span {
+  font-size: 1.2rem;
+  color: var(--light-blue);
+}
+
+.whiteBox .greranBlue {
+  font-size: 0.9rem;
+  color: var(--grean-blue);
+}
+
+.puls {
+  margin: 0;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  position: absolute;
+  display: block;
+  justify-items: center;
+  background-color: var(--light-blue);
+  background-image: url('/images/plus.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+  border-radius: 50%;
+}
+
+.buleBox {
+  background-color: rgba(0, 134, 173, 0.65);
+  margin-bottom: 1rem;
+  color: var(--font-white);
+  padding: 1rem 0.8rem;
+  border-radius: 10px;
+  border: thick double var(--font-white);
+  text-align: left;
+  font-weight: normal;
+}
+
+.page .smallMsg {
+  font-weight: normal;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
