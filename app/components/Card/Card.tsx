@@ -5,21 +5,33 @@ import Image from 'next/image';
 
 export default function Card({
   id,
-  title,
-  imageSrc,
   area,
+  imageSrc,
+  title,
+  service,
+  address,
 }: {
   id: string;
-  title: string;
-  imageSrc: string;
   area: string;
+  imageSrc: string;
+  title: string;
+  service: string;
+  address: string;
 }) {
   return (
     <div>
-      <Link href={`/${id}`}></Link>
-      <div>
-        <Image alt="" src={imageSrc} />
-      </div>
+      <Link href={`/yutaka/${id}`} style={{ textDecoration: 'none' }}>
+        <div className={styles.card}>
+          <div className={styles.cardImg}>
+            <img src={imageSrc} alt="shope-image" />
+          </div>
+          <div>
+            <h2 className={styles.cardTitle}>{title}</h2>
+            <p className={styles.cardText}>{service}</p>
+            <p className={styles.address}>{address}</p>
+          </div>
+        </div>
+      </Link>
     </div>
   );
 }

@@ -1,0 +1,51 @@
+/* スマホサイト用 */
+.card {
+  width: calc(100% - 2rem); /* 余白を含めて100%の幅 */
+  height: auto;
+  margin: 0.5rem 0rem;
+  padding: 1rem 0.8rem;
+  border-radius: 10px;
+  background-color: var(--font-white);
+  color: var(--font-black);
+  align-items: center;
+  border-radius: 10px;
+  text-align: center;
+  align-items: stretch;
+}
+
+.cardImg {
+  padding-top: calc(3 / 6 * 100%);
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.cardImg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardTitle h2 {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.cardText {
+  overflow: hidden;
+  /* オーバーした文字列を...で省略する */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 0.5rem;
+}
+.cardText::before {
+  content: '提供サービス:  ';
+}
+
+.address::before {
+  content: '所在地:  ';
+}
