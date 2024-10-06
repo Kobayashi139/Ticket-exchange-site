@@ -32,7 +32,8 @@ body {
 }
 
 * {
-  outline: 2px red solid;
+  /* 要素の外枠に赤線を入れる（揃えるため） */
+  /* outline: 2px red solid; */
   padding: 0;
   margin: 0;
 }

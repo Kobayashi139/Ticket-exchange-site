@@ -1,0 +1,14 @@
+.container {
+  /* 余白を含めて100%の幅 */
+  height: 3rem;
+  display: block;
+  margin: 0.5rem 0rem;
+  padding: 1rem 0.8rem;
+  border-radius: 10px;
+  background-color: var(--font-white);
+  color: var(--font-black);
+  align-items: center;
+  border-radius: 10px;
+  text-align: center;
+  align-items: stretch;
+}
