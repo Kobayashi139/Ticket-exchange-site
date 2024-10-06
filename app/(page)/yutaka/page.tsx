@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import styles from './yutaka.module.css';
 import Header from '../../components/Header/Header';

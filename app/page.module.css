@@ -3,7 +3,6 @@
   --変数名:値; でカスタムプロパティの定義ができる 
   実際に使いたい箇所で var(--変数名) と記述すると、定義した値を当てはめられる
   */
-
   min-height: 100svh;
   padding: 100px 40px;
   font-family: var(--font-geist-sans);

@@ -1,0 +1,54 @@
+.container {
+  padding: 110px 40px;
+  font-family: var(--font-geist-sans);
+  font-weight: normal;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.cardImg {
+  padding-top: calc(4 / 6 * 100%);
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.cardImg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardTitle h2 {
+  text-align: center;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.whiteBox {
+  background-color: var(--font-white);
+  margin-bottom: 1.5rem;
+  color: var(--font-black);
+  padding: 1rem 1rem;
+  text-align: left;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.cardText .address .tell {
+  margin-bottom: 0.8rem;
+}
+.cardText::before {
+  content: '提供サービス:  ';
+}
+
+.address::before {
+  content: '所在地:  ';
+}
+
+.tell::before {
+  content: '電話番号:  ';
+}
