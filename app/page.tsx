@@ -1,5 +1,6 @@
 import styles from './page.module.css';
 import Header from './components/Header/Header';
+import AreaBun from './components/AreaButton/AreaButton';
 import type React from 'react';
 
 export default function Home() {
@@ -53,6 +54,7 @@ export default function Home() {
         <h1>交付施設一覧</h1>
         <div>
           {/* ボタンはコンポーネント化してもいい（他ページで再利用するなら特に） */}
+          <AreaBun value="yutaka"></AreaBun>
           <button>下蒲刈</button>
         </div>
         <div className={styles.mapBox}></div>

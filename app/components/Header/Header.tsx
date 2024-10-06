@@ -3,10 +3,6 @@ import React from 'react';
 import { useState } from 'react';
 import styles from './Header.module.css';
 
-type HeaderProps = {
-  title: string;
-};
-
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false); //menuがopenされたらtrue
 
@@ -41,7 +37,7 @@ const Header = () => {
       >
         <ul>
           <li>
-            <a href="#">Menuuu</a>
+            <a href="/">トップページ</a>
           </li>
           <li>
             <a href="#">Menuuu</a>
