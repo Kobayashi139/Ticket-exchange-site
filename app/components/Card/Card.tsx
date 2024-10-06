@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './card.module.css';
-import Image from 'next/image';
 
 export default function Card({
   id,
@@ -23,7 +22,7 @@ export default function Card({
       <Link href={`/yutaka/${id}`} style={{ textDecoration: 'none' }}>
         <div className={styles.card}>
           <div className={styles.cardImg}>
-            <img src={imageSrc} alt="shope-image" />
+            <img src={imageSrc} alt="shop-image" />
           </div>
           <div>
             <h2 className={styles.cardTitle}>{title}</h2>
